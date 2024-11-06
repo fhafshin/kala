@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeormConfig } from './config/typeorm.config';
 import { ConfigModule } from '@nestjs/config';
 import { join } from 'path';
+import { ProductModule } from './module/product/product.module';
 
 @Module({
   imports: [
@@ -13,8 +13,10 @@ import { join } from 'path';
       envFilePath: join(process.cwd(), '.env'),
     }),
     TypeOrmModule.forRoot(typeormConfig()),
+
+    ProductModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
