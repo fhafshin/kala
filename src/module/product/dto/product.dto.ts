@@ -15,9 +15,9 @@ export class CreateProductDto {
   @ApiPropertyOptional()
   discount: number;
   @ApiPropertyOptional()
-  active_discount: number;
+  active_discount: boolean;
   @ApiProperty()
-  count: string;
+  count: number;
   @ApiProperty({ enum: ProductType })
   type: string;
 }
