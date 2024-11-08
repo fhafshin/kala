@@ -16,4 +16,4 @@ export class AddColorDto {
   @ApiPropertyOptional()
   active_discount: boolean;
 }
-export class UpdateColorlDto extends PartialType(AddColorDto) {}
+export class UpdateColorDto extends PartialType(AddColorDto) {}

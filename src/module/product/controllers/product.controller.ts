@@ -9,7 +9,7 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { ProductService } from '../product.service';
+import { ProductService } from '../services/product.service';
 import { CreateProductDto, UpdateProductDto } from '../dto/product.dto';
 import { ApiConsumes, ApiTags } from '@nestjs/swagger';
 import { SwaggerConsumes } from '../../../common/enum/swagger-consumes.enum';

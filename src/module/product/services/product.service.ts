@@ -4,11 +4,11 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ProductEntity } from './entites/product.entity';
+import { ProductEntity } from '../entites/product.entity';
 import { DeepPartial, Repository } from 'typeorm';
-import { CreateProductDto, UpdateProductDto } from './dto/product.dto';
+import { CreateProductDto, UpdateProductDto } from '../dto/product.dto';
 import { ApiTags } from '@nestjs/swagger';
-import { ProductType } from './enum/type.enum';
+import { ProductType } from '../enum/type.enum';
 
 @Injectable()
 export class ProductService {

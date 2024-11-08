@@ -1,10 +1,12 @@
 import { ApiProperty, ApiPropertyOptional, PartialType } from '@nestjs/swagger';
+import { IsNumber } from 'class-validator';
 
 export class AddSizeDto {
   @ApiProperty()
   productId: number;
   @ApiProperty()
   size: string;
+  @IsNumber()
   @ApiProperty()
   count: number;
   @ApiProperty()
