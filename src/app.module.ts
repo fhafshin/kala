@@ -5,6 +5,7 @@ import { typeormConfig } from './config/typeorm.config';
 import { ConfigModule } from '@nestjs/config';
 import { join } from 'path';
 import { ProductModule } from './module/product/product.module';
+import { DiscountModule } from './module/discount/discount.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { ProductModule } from './module/product/product.module';
     TypeOrmModule.forRoot(typeormConfig()),
 
     ProductModule,
+    DiscountModule,
   ],
   controllers: [],
   providers: [],

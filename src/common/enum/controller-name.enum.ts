@@ -3,4 +3,5 @@ export enum ControllerNames {
   'ProductColor' = 'product-color',
   'ProductSize' = 'product-size',
   'ProductDetail' = 'product-detail',
+  'Discount' = 'discount',
 }
