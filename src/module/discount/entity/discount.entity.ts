@@ -1,6 +1,7 @@
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 import { BaseEntity } from '../../../common/abstract/base.entity';
 import { Type } from '../enum/type.enum';
+import { BasketEntity } from '../../basket/entity/basket.entity';
 
 @Entity('discount')
 export class DiscountEntity extends BaseEntity {
@@ -20,4 +21,7 @@ export class DiscountEntity extends BaseEntity {
   productId: number;
   @Column({ type: 'enum', enum: Type })
   type: string;
+
+  @OneToMany(() => BasketEntity, (basket) => basket.discount)
+  baskets: BasketEntity[];
 }

@@ -33,5 +33,6 @@ import { ProductDetailEntity } from './entites/product-detail.entity';
     ProductColorService,
     ProductDetailService,
   ],
+  exports: [ProductService, ProductColorService, ProductSizeService],
 })
 export class ProductModule {}

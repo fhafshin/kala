@@ -1,6 +1,7 @@
-import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany } from 'typeorm';
 import { ProductEntity } from './product.entity';
 import { BaseEntity } from '../../../common/abstract/base.entity';
+import { BasketEntity } from '../../basket/entity/basket.entity';
 
 @Entity('product_color')
 export class ProductColorEntity extends BaseEntity {
@@ -22,4 +23,7 @@ export class ProductColorEntity extends BaseEntity {
   @ManyToOne(() => ProductEntity, (product) => product.colors)
   //@JoinColumn({ name: 'productId' })
   product: ProductEntity;
+
+  @OneToMany(() => BasketEntity, (basket) => basket.color)
+  baskets: BasketEntity[];
 }
